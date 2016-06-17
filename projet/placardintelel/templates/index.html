@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title> Nabil </title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>Le site à Nabil</h1>
+        <p>...</p>
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+      </div>
+
+
+
+
+
+      <!-- Masse_actuelle -->
+      <div class="alert alert-success" role="alert"><b>MASSE_ACTUELLE</b></div>
+
+      <table class="table">
+        <tr>
+          <th>TAG</th>
+          <th>MASSE</th>
+        </tr>
+        {% for valeur in masse_actuelle %}
+          <tr>
+            <td>{{valeur.tag.id_tag}}</td>
+            <td>{{valeur.masse}} g</td>
+          </tr>
+        {% endfor %}
+      </table>
+
+      <!--  historique_receptions -->
+      <div class="alert alert-success" role="alert"><b>HISTORIQUE_RECEPTIONS</b></div>
+
+      <table class="table">
+        <tr>
+          <th>TAG</th>
+          <th>MASSE</th>
+          <th>TAG</th>
+          <th>DATE</th>
+        </tr>
+        {% for valeur in historique_receptions %}
+          <tr>
+            <td>{{valeur.id}}</td>
+            <td>{{valeur.tag.id_tag}} g</td>
+            <td>{{valeur.masse}} g</td>
+            <td>{{valeur.date}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+
+      <!-- Masse_prelevé -->
+      <div class="alert alert-success" role="alert"><b>MASSE_PRELEVEE</b></div>
+
+      <table class="table">
+        <tr>
+          <th>TAG</th>
+          <th>MASSE</th>
+          <th>TAG</th>
+          <th>DATE</th>
+        </tr>
+        {% for valeur in masse_prelevee %}
+          <tr>
+            <td>{{valeur.id}}</td>
+            <td>{{valeur.tag.id_tag}} g</td>
+            <td>{{valeur.masse}} g</td>
+            <td>{{valeur.date}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+
+      <!-- reference_tag -->
+
+      <div class="alert alert-success" role="alert"><b>REFERENCE_TAG</b></div>
+
+      <table class="table">
+        <tr>
+          <th>TAG</th>
+          <th>CALORIES</th>
+        </tr>
+        {% for valeur in reference_tag %}
+          <tr>
+            <td>{{valeur.id_tag}}</td>
+            <td>{{valeur.calories}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+
+
+
+
+
+  </div>
+  </body>
+</html>
