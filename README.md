@@ -27,9 +27,13 @@ $ cd projet
 $ python manage.py runserver 0.0.0.0:8000
 ```
 
-Le site est disponible à l'adresse: http://localhost:8000
+OUvrez votre navigateur web
+tapez l'adresse suivante:
+
+ http://localhost:8000
 
 Le panel admin est disponible à l'adresse:
+pour le developper 
 http://localhost:8000/admin
 
 **Pour chaque modification des modèles**
