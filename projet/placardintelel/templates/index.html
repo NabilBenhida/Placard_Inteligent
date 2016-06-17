@@ -39,15 +39,15 @@
 
       <table class="table">
         <tr>
+          <th>ID</th>
           <th>TAG</th>
           <th>MASSE</th>
-          <th>TAG</th>
           <th>DATE</th>
         </tr>
         {% for valeur in historique_receptions %}
           <tr>
             <td>{{valeur.id}}</td>
-            <td>{{valeur.tag.id_tag}} g</td>
+            <td>{{valeur.tag.id_tag}}</td>
             <td>{{valeur.masse}} g</td>
             <td>{{valeur.date}}</td>
           </tr>
@@ -59,15 +59,15 @@
 
       <table class="table">
         <tr>
-          <th>TAG</th>
+          <th>ID</th>
+          <th>TAG<th>
           <th>MASSE</th>
-          <th>TAG</th>
           <th>DATE</th>
         </tr>
         {% for valeur in masse_prelevee %}
           <tr>
             <td>{{valeur.id}}</td>
-            <td>{{valeur.tag.id_tag}} g</td>
+            <td>{{valeur.tag.id_tag}}</td>
             <td>{{valeur.masse}} g</td>
             <td>{{valeur.date}}</td>
           </tr>
