@@ -1,3 +1,4 @@
+{% load poll_extras %}
 <html>
   <head>
     <title> Nabil </title>
@@ -28,7 +29,7 @@
         </tr>
         {% for valeur in masse_actuelle %}
           <tr>
-            <td>{{valeur.tag.id_tag}}</td>
+            <td>{{valeur.id_tag}}</td>
             <td>{{valeur.masse}} g</td>
           </tr>
         {% endfor %}
@@ -44,12 +45,12 @@
           <th>MASSE</th>
           <th>DATE</th>
         </tr>
-        {% for valeur in historique_receptions %}
+        {% for valeur in reception %}
           <tr>
             <td>{{valeur.id}}</td>
-            <td>{{valeur.tag.id_tag}}</td>
+            <td>{{valeur.id_tag}}</td>
             <td>{{valeur.masse}} g</td>
-            <td>{{valeur.date}}</td>
+            <td>{{valeur.date|timestamptodate}}</td>
           </tr>
         {% endfor %}
       </table>
@@ -67,9 +68,9 @@
         {% for valeur in masse_prelevee %}
           <tr>
             <td>{{valeur.id}}</td>
-            <td>{{valeur.tag.id_tag}}</td>
+            <td>{{valeur.id_tag}}</td>
             <td>{{valeur.masse}} g</td>
-            <td>{{valeur.date}}</td>
+            <td>{{valeur.date|timestamptodate}}</td>
           </tr>
         {% endfor %}
       </table>
@@ -87,6 +88,23 @@
           <tr>
             <td>{{valeur.id_tag}}</td>
             <td>{{valeur.calories}}</td>
+          </tr>
+        {% endfor %}
+      </table>
+
+      <!-- produit_present -->
+
+      <div class="alert alert-success" role="alert"><b>PRODUIT_PRESENT</b></div>
+
+      <table class="table">
+        <tr>
+          <th>TAG</th>
+          <th>ID_RECEPTION</th>
+        </tr>
+        {% for valeur in produit_present %}
+          <tr>
+            <td>{{valeur.id_tag}}</td>
+            <td>{{valeur.id_reception}}</td>
           </tr>
         {% endfor %}
       </table>
